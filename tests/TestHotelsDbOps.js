@@ -1,6 +1,18 @@
-process.env.DB_URI = "mongodb://ds059316.mlab.com:59316/acmetravel"
-process.env.DB_USER = "***"
-process.env.DB_PASSWORD = "***"
+/**
+ * Simple tests for all DB tests
+ * 
+ * Adds the test data to the collection
+ */
+
+
+// This is the old way which is not accepted by API anymore
+// This is what you have seen in he video - please use the process.env.DB_URI
+//process.env.DB_USER = "test";//
+//process.env.DB_PASSWORD = "test";//acloudfan" 
+
+// Provide the URI in the right format
+process.env.DB_URI = "mongodb+srv://kabilan93:dbpassword@cluster0-xd6gc.mongodb.net/acmetravel?retryWrites=true"
+
 
 //Test#1  Insert the Vacation data
 var db = require('../db/hotels')
